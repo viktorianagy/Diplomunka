@@ -1,0 +1,7 @@
+model models\cover.mod; 
+data models\graf.dat; 
+option solver cplex; 
+option solver_msg 0; 
+solve; 
+printf "\n"; 
+printf{i in N: x[i]==1} "%d\n", i; 
